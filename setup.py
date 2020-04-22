@@ -11,6 +11,8 @@ setup(name='snowflakes_magic',
       author='Gildas Darex TOSSA',
       author_email='gtossa@lafourchette.com',
       url='none',
-      install_requires=requirements
+      install_requires=requirements,
+      packages=['snowflakes']
+
      )
 
