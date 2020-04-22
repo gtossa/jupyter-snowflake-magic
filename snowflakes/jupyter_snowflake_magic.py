@@ -28,7 +28,7 @@ class Snowflake_Sql(Magics, Configurable):
     def execute(self, line, cell='', local_ns={}):        
         if not self.username:
             line.strip()
-            self.username, self.password, self.account = line.split(" ")
+            self.username, self.password, self.account, self.warehouse = line.split(" ")
             self.connection = snowflake.connector.connect(
               user=self.username,
               password=self.password,
