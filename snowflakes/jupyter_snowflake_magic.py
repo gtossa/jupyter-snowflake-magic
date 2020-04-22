@@ -19,7 +19,7 @@ class Snowflake_Sql(Magics, Configurable):
 
         self.shell.configurables.append(self)
         self.connection, self.engine = None, None
-        self.username, self.password, self.account = None, None, None
+        self.username, self.password, self.account, self.warehouse = None, None, None, None
     
    
     @needs_local_scope
@@ -33,6 +33,7 @@ class Snowflake_Sql(Magics, Configurable):
               user=self.username,
               password=self.password,
               account=self.account,
+              warehouse=self.warehouse,
             )
 
         if len(cell) > 0:
